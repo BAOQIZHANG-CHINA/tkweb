@@ -51,6 +51,44 @@ attractionCards.forEach(card => {
     });
 });
 
+// 详细信息弹窗功能
+function showAttractionDetails(title, description) {
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>${title}</h2>
+            <p>${description}</p>
+            <button class="modal-book-btn">预订门票</button>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // 关闭模态框
+    modal.querySelector('.close').addEventListener('click', function() {
+        document.body.removeChild(modal);
+    });
+    
+    // 点击模态框外部关闭
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+        }
+    });
+}
+
+// 为详情按钮添加功能
+document.querySelectorAll('.detail-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const card = this.closest('.attraction-card');
+        const title = card.querySelector('h3').textContent;
+        const description = card.querySelector('p').textContent;
+        showAttractionDetails(title, description);
+    });
+});
+
 // 天气小部件功能
 function updateWeather() {
     // 模拟天气数据更新
