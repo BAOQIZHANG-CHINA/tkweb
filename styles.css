@@ -9,7 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 50%, #1E90FF 100%);
     overflow-x: hidden;
 }
 
@@ -36,12 +36,22 @@ body {
     width: 100%;
     z-index: 1000;
     transition: background-color 0.3s ease;
-    background: linear-gradient(90deg, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
+    background: rgba(138, 43, 226, 0.9);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px 0; /* 添加一些内边距 */
 }
 
-.navbar.scrolled {
-    background: linear-gradient(90deg, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
+/* 在导航栏中添加UAE国旗元素 */
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px; /* 国旗宽度比例 */
+    height: 100%;
+    background: linear-gradient(to right, var(--uae-red) 0%, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='1' height='2' x='0' y='0' fill='%23fff'/%3E%3Crect width='2' height='1' x='1' y='0' fill='%23fff'/%3E%3Crect width='2' height='1' x='1' y='1' fill='%23000'/%3E%3C/svg%3E") top left / contain fill;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='1' height='2' x='0' y='0' fill='%23fff'/%3E%3Crect width='2' height='1' x='1' y='0' fill='%23fff'/%3E%3Crect width='2' height='1' x='1' y='1' fill='%23000'/%3E%3C/svg%3E") top left / contain fill;
 }
 
 .nav-container {
@@ -49,6 +59,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
+    position: relative;
+    z-index: 2; /* 确保内容在国旗元素之上 */
 }
 
 .logo {
@@ -56,14 +68,6 @@ body {
     font-weight: bold;
     color: #FFD700;
     font-family: 'Tajawal', sans-serif;
-    display: flex;
-    align-items: center;
-}
-
-.logo::before {
-    content: "_Flag_";
-    margin-right: 8px;
-    font-size: 1.2em;
 }
 
 .nav-menu {
@@ -103,7 +107,7 @@ body {
 /* Hero区域样式 */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)), url('https://images.unsplash.com/photo-1564647376127-184b5e4679d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(106, 17, 203, 0.6), rgba(37, 117, 252, 0.6)), url('https://images.unsplash.com/photo-1564647376127-184b5e4679d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,17 +162,19 @@ body {
 
 .search-box button {
     padding: 15px 30px;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
     color: white;
     border: none;
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s ease;
+    border-radius: 50px;
 }
 
 .search-box button:hover {
-    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    background: linear-gradient(135deg, #4B0082 0%, #1E90FF 100%);
     transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* 天气小部件 */
@@ -274,7 +280,7 @@ h2::after {
     width: calc(100% - 30px);
     margin: 0 15px 15px;
     padding: 10px;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
     color: white;
     border: none;
     border-radius: 5px;
@@ -284,8 +290,9 @@ h2::after {
 }
 
 .detail-btn:hover {
-    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    background: linear-gradient(135deg, #4B0082 0%, #1E90FF 100%);
     transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .price {
@@ -537,21 +544,24 @@ h2::after {
 
 /* 页脚样式 */
 footer {
-    background: linear-gradient(90deg, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
+    background: rgba(138, 43, 226, 0.9);
     color: white;
     padding: 40px 0 20px;
     position: relative;
+    border-top: 3px solid #FFD700;
 }
 
-/* 阿联酋国旗装饰元素 */
-.flag-decor {
+/* 在页脚添加UAE国旗 */
+footer::before {
+    content: "";
     position: absolute;
     top: 10px;
-    left: 10px;
-    width: 40px;
-    height: 24px;
-    background: linear-gradient(to bottom, var(--uae-red) 0%, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
+    right: 20px;
+    width: 60px;
+    height: 36px;
+    background: linear-gradient(to right, var(--uae-red) 0%, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
     border: 1px solid #ccc;
+    border-radius: 2px;
 }
 
 .footer-content {
