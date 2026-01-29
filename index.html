@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发现迪拜 · 沙漠中的奇迹</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">迪拜之旅</div>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#attractions">必游景点</a></li>
+                <li><a href="#food">美食推荐</a></li>
+                <li><a href="#shopping">购物指南</a></li>
+                <li><a href="#accommodation">住宿推荐</a></li>
+                <li><a href="#tips">旅行贴士</a></li>
+                <li><a href="#about">关于我们</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页 Hero 区 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>发现迪拜 · 沙漠中的奇迹</h1>
+            <p>奢华、冒险与文化的完美融合</p>
+            <div class="search-box">
+                <input type="text" placeholder="搜索景点、攻略、美食...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 天气小部件 -->
+    <div class="weather-widget">
+        <div class="weather-info">
+            <span id="weather-location">迪拜</span>
+            <span id="weather-temp">28°C</span>
+            <span id="weather-desc">晴朗</span>
+        </div>
+    </div>
+
+    <!-- 必游景点模块 -->
+    <section id="attractions" class="attractions">
+        <div class="container">
+            <h2>必游景点</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <img src="https://via.placeholder.com/300x200/FFD700/0A2463?text=哈利法塔" alt="哈利法塔">
+                    <h3>哈利法塔</h3>
+                    <p>世界最高建筑，俯瞰整个迪拜天际线</p>
+                    <div class="rating">
+                        <span>⭐️⭐️⭐️⭐️⭐️</span>
+                    </div>
+                    <button class="detail-btn">查看详情</button>
+                </div>
+                <div class="attraction-card">
+                    <img src="https://via.placeholder.com/300x200/0A2463/FFD700?text=帆船酒店" alt="帆船酒店">
+                    <h3>帆船酒店</h3>
+                    <p>世界最豪华的七星级酒店</p>
+                    <div class="rating">
+                        <span>⭐️⭐️⭐️⭐️⭐️</span>
+                    </div>
+                    <button class="detail-btn">查看详情</button>
+                </div>
+                <div class="attraction-card">
+                    <img src="https://via.placeholder.com/300x200/F5DEB3/0A2463?text=朱美拉清真寺" alt="朱美拉清真寺">
+                    <h3>朱美拉清真寺</h3>
+                    <p>迪拜最美丽的伊斯兰建筑</p>
+                    <div class="rating">
+                        <span>⭐️⭐️⭐️⭐️⭐️</span>
+                    </div>
+                    <button class="detail-btn">查看详情</button>
+                </div>
+                <div class="attraction-card">
+                    <img src="https://via.placeholder.com/300x200/FFFFFF/0A2463?text=迪拜购物中心" alt="迪拜购物中心">
+                    <h3>迪拜购物中心</h3>
+                    <p>世界最大的购物中心</p>
+                    <div class="rating">
+                        <span>⭐️⭐️⭐️⭐️⭐️</span>
+                    </div>
+                    <button class="detail-btn">查看详情</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 美食推荐模块 -->
+    <section id="food" class="food">
+        <div class="container">
+            <h2>美食推荐</h2>
+            <div class="food-grid">
+                <div class="food-item">
+                    <img src="https://via.placeholder.com/250x150/FFD700/0A2463?text=Shawarma" alt="Shawarma">
+                    <h3>Shawarma</h3>
+                    <p>阿拉伯经典卷饼</p>
+                    <p class="restaurant">推荐餐厅：Al Fanar Restaurant</p>
+                </div>
+                <div class="food-item">
+                    <img src="https://via.placeholder.com/250x150/0A2463/FFD700?text=Mandi" alt="Mandi">
+                    <h3>Mandi</h3>
+                    <p>传统阿拉伯烤肉米饭</p>
+                    <p class="restaurant">推荐餐厅：Al Safadi Restaurant</p>
+                </div>
+                <div class="food-item">
+                    <img src="https://via.placeholder.com/250x150/F5DEB3/0A2463?text=Kunafa" alt="Kunafa">
+                    <h3>Kunafa</h3>
+                    <p>经典中东甜品</p>
+                    <p class="restaurant">推荐餐厅：Khyam Restaurant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 购物指南 -->
+    <section id="shopping" class="shopping">
+        <div class="container">
+            <h2>购物指南</h2>
+            <div class="shopping-content">
+                <div class="shopping-item">
+                    <h3>迪拜购物中心</h3>
+                    <p>世界最大的购物中心，拥有超过1200家商店，还有室内滑雪场和水族馆。</p>
+                    <h4>购物小贴士：</h4>
+                    <ul>
+                        <li>可享受免税购物</li>
+                        <li>许多商店接受支付宝和微信支付</li>
+                        <li>大型促销季：迪拜购物节（12月-次年1月）</li>
+                    </ul>
+                </div>
+                <div class="shopping-item">
+                    <h3>黄金市场</h3>
+                    <p>德伊勒黄金市场是购买黄金珠宝的好去处，价格实惠，品质优良。</p>
+                    <h4>购物小贴士：</h4>
+                    <ul>
+                        <li>可以砍价，通常报价可砍掉20%-30%</li>
+                        <li>检查黄金纯度标识</li>
+                        <li>比较多家店铺后再决定</li>
+                    </ul>
+                </div>
+                <div class="shopping-item">
+                    <h3>香料市场</h3>
+                    <p>德伊勒香料市场充满异域风情，可以购买各种香料、草药和香水。</p>
+                    <h4>购物小贴士：</h4>
+                    <ul>
+                        <li>可以免费试用香水样品</li>
+                        <li>香料价格便宜，适合带回家送礼</li>
+                        <li>注意海关限量规定</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 旅行贴士 -->
+    <section id="tips" class="tips">
+        <div class="container">
+            <h2>旅行贴士</h2>
+            <div class="tips-content">
+                <div class="tip-item">
+                    <h3>最佳旅行时间</h3>
+                    <p>11月至次年3月是最适宜的旅游季节，气候凉爽宜人。夏季（5-9月）气温较高，但酒店价格相对较低。</p>
+                </div>
+                <div class="tip-item">
+                    <h3>签证信息</h3>
+                    <p>中国公民可享受免签政策，允许停留30天。如需延长，可申请续签。</p>
+                </div>
+                <div class="tip-item">
+                    <h3>当地礼仪</h3>
+                    <p>在公共场所穿着得体，避免暴露服装。斋月期间，白天在公共场合饮食需谨慎。周五为穆斯林休息日，部分商店可能关闭。</p>
+                </div>
+                <div class="tip-item">
+                    <h3>交通指南</h3>
+                    <p>迪拜地铁系统高效便捷，出租车起步价约15迪拉姆。也可使用网约车服务。自驾需持有国际驾照。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 货币转换器 -->
+    <section class="currency-converter">
+        <div class="container">
+            <h2>货币转换器</h2>
+            <div class="converter">
+                <div class="converter-inputs">
+                    <input type="number" id="amount" placeholder="金额" value="1">
+                    <select id="fromCurrency">
+                        <option value="AED">AED (迪拉姆)</option>
+                        <option value="CNY">CNY (人民币)</option>
+                        <option value="USD">USD (美元)</option>
+                    </select>
+                    <span class="arrow">→</span>
+                    <select id="toCurrency">
+                        <option value="CNY">CNY (人民币)</option>
+                        <option value="AED">AED (迪拉姆)</option>
+                        <option value="USD">USD (美元)</option>
+                    </select>
+                    <div class="result">
+                        <span id="convertedAmount">6.5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行程规划器 -->
+    <section class="itinerary-planner">
+        <div class="container">
+            <h2>行程规划器</h2>
+            <div class="planner-content">
+                <p>收藏您感兴趣的景点，自动生成个性化行程单</p>
+                <button class="save-itinerary">保存行程</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f">FB</i></a>
+                    <a href="#"><i class="fab fa-instagram">IG</i></a>
+                    <a href="#"><i class="fab fa-twitter">TW</i></a>
+                </div>
+                <p>&copy; 2025 迪拜之旅. 版权所有.</p>
+                <div class="quick-links">
+                    <a href="#">隐私政策</a>
+                    <a href="#">使用条款</a>
+                    <a href="#">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
