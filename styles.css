@@ -9,8 +9,16 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
-    background-color: #fff;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     overflow-x: hidden;
+}
+
+/* 阿联酋国旗颜色变量 */
+:root {
+    --uae-red: #ce1126;
+    --uae-green: #006633;
+    --uae-white: #ffffff;
+    --uae-black: #000000;
 }
 
 .container {
@@ -28,11 +36,12 @@ body {
     width: 100%;
     z-index: 1000;
     transition: background-color 0.3s ease;
-    background-color: rgba(10, 36, 99, 0.9);
+    background: linear-gradient(90deg, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar.scrolled {
-    background-color: rgba(10, 36, 99, 0.95);
+    background: linear-gradient(90deg, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
 }
 
 .nav-container {
@@ -47,6 +56,14 @@ body {
     font-weight: bold;
     color: #FFD700;
     font-family: 'Tajawal', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.logo::before {
+    content: "_Flag_";
+    margin-right: 8px;
+    font-size: 1.2em;
 }
 
 .nav-menu {
@@ -86,7 +103,7 @@ body {
 /* Hero区域样式 */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(10, 36, 99, 0.6), rgba(10, 36, 99, 0.6)), url('https://images.unsplash.com/photo-1564647376127-184b5e4679d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)), url('https://images.unsplash.com/photo-1564647376127-184b5e4679d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,16 +158,17 @@ body {
 
 .search-box button {
     padding: 15px 30px;
-    background: #FFD700;
-    color: #0A2463;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .search-box button:hover {
-    background: #e6c200;
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    transform: scale(1.05);
 }
 
 /* 天气小部件 */
@@ -195,9 +213,10 @@ h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #0A2463;
+    color: #ffffff;
     font-family: 'Tajawal', sans-serif;
     position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 h2::after {
@@ -205,7 +224,7 @@ h2::after {
     display: block;
     width: 80px;
     height: 4px;
-    background: #FFD700;
+    background: linear-gradient(90deg, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
     margin: 10px auto;
     border-radius: 2px;
 }
@@ -255,22 +274,23 @@ h2::after {
     width: calc(100% - 30px);
     margin: 0 15px 15px;
     padding: 10px;
-    background: #FFD700;
-    color: #0A2463;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .detail-btn:hover {
-    background: #e6c200;
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    transform: scale(1.05);
 }
 
 .price {
     padding: 0 15px 10px;
-    color: #0A2463;
+    color: var(--uae-red);
     font-weight: bold;
 }
 
@@ -517,9 +537,21 @@ h2::after {
 
 /* 页脚样式 */
 footer {
-    background: #0A2463;
+    background: linear-gradient(90deg, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
     color: white;
     padding: 40px 0 20px;
+    position: relative;
+}
+
+/* 阿联酋国旗装饰元素 */
+.flag-decor {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 24px;
+    background: linear-gradient(to bottom, var(--uae-red) 0%, var(--uae-red) 25%, var(--uae-green) 25%, var(--uae-green) 50%, var(--uae-white) 50%, var(--uae-white) 75%, var(--uae-black) 75%);
+    border: 1px solid #ccc;
 }
 
 .footer-content {
